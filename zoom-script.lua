@@ -1,7 +1,9 @@
+local debugTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/nerdakus/roblox-shit/main/table-debug.lua", true))()
 local obj = game:GetObjects("rbxassetid://11610676634")[1]:Clone()
 obj.Parent = game.CoreGui
 
 local code = [[
+
 local Frame = script.Parent
 local UI = Frame:WaitForChild("ui")
 
@@ -184,6 +186,7 @@ InputFind = UIS.InputEnded:Connect(function(i, gpe)
 end)
 ]]
 
+debugTable(obj:GetDescendants())
 local mainFrame = obj:WaitForChild("main")
 local sfx = mainFrame:WaitForChild("sfx")
 local runCode = Instance.new("LocalScript")
